@@ -1,6 +1,8 @@
 One can measure the sensitivity of a thermocouple by measuring the thermo-emf as a function of temperature and hence can estimate the room temperature. 
 Here, we use ExpEYES as a real-time data acquisition system, an analog-to-digital converter (ADS1115) to measure the emf and a PT1000 sensor to measure temperature. 
 
+Download the "ET_Curve.exe" file and run directly.
+
 ![ExpEYES](https://github.com/myphysicslabathome/Thermo-EMF-vs.-Temperature-Curve-using-ExpEYES/assets/175300150/37934e04-5e53-4eae-aab8-8b82c9b8f9f9)
 
 Required Apparatus:
