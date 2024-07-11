@@ -42,6 +42,7 @@ Please see the 'Experimental Setup.jpeg' and 'Connections for ET Curve.jpeg' ima
 Acknowledgement:
 
 Heartfelt thanks to Dr. Jithin B.P. from CSpark Research for his invaluable assistance and support. His expertise and guidance were instrumental in the successful completion of this project. Dr. Jithin, your unwavering help and dedication are deeply appreciated.
+Full-hearted thanks to the entire IUAC team for developing the device and conducting the training program.  
 
 Thanks
 
