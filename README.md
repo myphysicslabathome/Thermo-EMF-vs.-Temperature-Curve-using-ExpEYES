@@ -1,11 +1,14 @@
-One can measure the sensitivity of a thermocouple by measuring the thermo-emf as a function of temperature and hence can estimate the room temperature. 
-Here, we use ExpEYES as a real-time data acquisition system, an analog-to-digital converter (ADS1115) to measure the emf and a PT1000 sensor to measure temperature. 
+# Thermocouple Sensitivity Measurement using ExpEYES and ADS1115
+
+## Overview
+This project aims to measure the sensitivity of a thermocouple by analyzing thermo-emf as a function of temperature using ExpEYES, an ADS1115 analog-to-digital converter, and a PT1000 temperature sensor.
 
 Download the "ET_Curve.exe" file and run directly.
 
-![ExpEYES](https://github.com/myphysicslabathome/Thermo-EMF-vs.-Temperature-Curve-using-ExpEYES/assets/175300150/37934e04-5e53-4eae-aab8-8b82c9b8f9f9)
+<img src="./ExpEYES.png" alt="ExpEYES" width="500"  title="ExpEYES">
 
-Required Apparatus:
+## Required Apparatus :
+
 1. ExpEYES latest model (SEELAB 3.0, with I2C expansion bus)
 2. Analog to digital converter (ADS1115)
 3. Temperature Sensor (PT1000)
@@ -14,37 +17,83 @@ Required Apparatus:
 6. Glass beaker (100 ml)
 6. Mini Immersion water heater (optional)
 
+# Procedure:
 
-PROCEDURE :
-1. Take 40 ml of hot water (temperature around 90 degrees Celsius)
-2. Dip PT1000 and T/K-type thermocouple inside the hot water
-3. Connect PT1000 between SEN and Ground
-4. Connect 5V, GND, SCL, SDA of ExpEYES respectively with VCC, GND, SCL, SDA of ADS1115 
-5. Connect ExpEYES with PC via USB cable
-5. Run the Python script or .exe file 
-6. Set the time interval (20 or 30 sec) according to you system
-7. Time (sec), temperature (degree Celsius) and thermo-emf (mv) data will be displayed on the screen and saved in "ET.dat" file
-8. Plot 2nd and 3rd column
-9. Fit Linear to estimate the thermocouple sensitivity (slope) and room temperature (intercept)
-10. Don't forget to delete the existing data file "ET.dat", if you are running the Python script or .exe file for multiple times.
+### Experimental Setup
 
-Experimental Setup and Connections:
-![Experimental Setup](https://github.com/myphysicslabathome/Thermo-EMF-vs.-Temperature-Curve-using-ExpEYES/assets/175300150/fa5fac3e-fe3e-40e1-a1d9-9284caa9c80a)
-![Connections for ET Curve](https://github.com/myphysicslabathome/Thermo-EMF-vs.-Temperature-Curve-using-ExpEYES/assets/175300150/b239d757-05d3-4baf-9d44-49ee344cdc3d)
+1. **Preparation**: Take 40 ml of hot water (~90°C).
+2. **Sensor Setup**: Submerge PT1000 and T/K-type thermocouple in hot water.
+3. **Connections**:
+   - Connect PT1000 between SEN and Ground.
+   - Connect ExpEYES (VCC, GND, SCL, SDA) to ADS1115 (VCC, GND, SCL, SDA).
+   - Connect thermocouple between A0 of ADS1115 and ground. 
+4. **Data Acquisition**:
+   - Connect ExpEYES to PC via USB.
+   - Run the provided ET_Curve.exe file.
+   - Set time interval (20 or 30 sec).
+   - Data (time, temperature, thermo-emf) will be saved to "ET.dat".
+5. **Graphing**:
+   - Plot 2nd and 3rd column
+   - Fit Linear to estimate the thermocouple sensitivity (slope) and room temperature (extrapolation)
 
-Results: 
-![ET Curve](https://github.com/myphysicslabathome/Thermo-EMF-vs.-Temperature-Curve-using-ExpEYES/assets/175300150/454319d0-f009-40e3-b365-f841a9f26ccf)
+> ### NOTES :
+> - Don't forget to delete the existing data file "ET.dat", if you are running the ET_Curve.exe file multiple times.
+> - Reference_data (i.e, "T-type.dat") and graph ("ET Curve.png") for T-type thermocouple are provided.
 
-NOTE :
-A sample data ('T-type.dat') and the corresponding graph ('ET Curve.png') for t-type thermocouple is also provided for reference. 
-Please see the 'Experimental Setup.jpeg' and 'Connections for ET Curve.jpeg' images for setup and connection. 
+## Experimental Setup and Connections :
+<img src="./Experimental Setup.jpeg" alt="Experimental_Setup_1" width="500" title="Experimental_Setup">
+<img src="./Connections for ET Curve.jpeg" alt="Experimental_Setup_2" width="500" title="Experimental_Connections">
 
-Acknowledgement:
+> ## NOTES :
+> - A sample data ('T-type.dat') and the corresponding graph ('ET Curve.png') for the t-type thermocouple are also provided for reference.
+> - Please see the 'Experimental Setup.jpeg' and 'Connections for ET Curve.jpeg' images for setup and connection.
 
-Heartfelt thanks to Dr. Jithin B.P. from CSpark Research for his invaluable assistance and support. His expertise and guidance were instrumental in the successful completion of this project. Dr. Jithin, your unwavering help and dedication are deeply appreciated.
+#Result :
 
-Wholehearted thanks to the entire IUAC team for developing the device and conducting the training program.
+## T-type.dat :
+```plaintext
+0.06 58.80 1.85
+20.15 76.35 1.94
+40.27 74.75 1.81
+60.41 72.20 1.70
+80.61 70.20 1.59
+100.72 68.21 1.49
+120.90 66.09 1.40
+141.07 64.39 1.32
+161.22 62.38 1.24
+181.41 61.18 1.17
+201.58 59.83 1.11
+221.72 58.33 1.04
+241.83 57.61 0.98
+261.96 56.24 0.93
+282.15 55.24 0.88
+302.35 54.46 0.84
+322.48 53.35 0.78
+342.66 52.32 0.73
+362.86 51.36 0.69
+383.06 50.55 0.65
+403.26 49.84 0.62
+423.49 48.82 0.59
+443.65 48.30 0.54
+463.80 47.83 0.52
+483.95 47.03 0.48
+504.10 45.86 0.45
+```
+
+## Obtained ET Curve from "T-type.dat" :
+<img src="./ET Curve.png" alt="ExpEYES" width="500" title="ET Curve">
+
+## Special thanks to:
+
+- Heartfelt thanks to Dr. Jithin B.P. from CSpark Research for his invaluable assistance and support. His expertise and guidance were instrumental in the successful completion of this project. Dr. Jithin, your unwavering help and dedication are deeply appreciated.
+
+- Wholehearted thanks to the entire IUAC team for developing the device and conducting the training program.
+
+## License
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+![CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
+
+## Author
+  - Dr. Ujjwal Ghanta
 
 Thanks
-
-Dr. Ujjwal Ghanta
