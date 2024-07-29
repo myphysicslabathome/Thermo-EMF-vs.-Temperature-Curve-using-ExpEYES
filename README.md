@@ -89,6 +89,8 @@ Download the "ET_Curve.exe" file and run directly.
 
 - Wholehearted thanks to the entire Inter-University Accelerator Centre (IUAC), New Delhi, India team especially Er. V.V.V. Satyanarayana, Mr. Abhijit Sarkar, and Dr. Ajith Kumar B. P. for developing the device and conducting the training program.
 
+- Warm appreciation to Mr. Hemanta Kumar Ghosh from the Department of Basic Science, NSHM Knowledge Campus, Durgapur for his unwavering support in making this project successful. 
+
 ## License
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 ![CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
