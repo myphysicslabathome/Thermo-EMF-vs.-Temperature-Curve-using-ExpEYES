@@ -48,7 +48,7 @@ Download the "ET_Curve.exe" file and run directly.
 > - A sample data ('T-type.dat') and the corresponding graph ('ET Curve.png') for the t-type thermocouple are also provided for reference.
 > - Please see the 'Experimental Setup.jpeg' and 'Connections for ET Curve.jpeg' images for setup and connection.
 
-#Result :
+# Result :
 
 ## T-type.dat :
 ```plaintext
